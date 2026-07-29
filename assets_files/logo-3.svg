@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 60" height="40">
+  <defs>
+    <linearGradient id="nxGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B2450"/>
+      <stop offset="100%" stop-color="#4C3FE0"/>
+    </linearGradient>
+  </defs>
+  <text x="0" y="42" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="34" fill="url(#nxGrad2)">&lt;N</text>
+  <text x="58" y="42" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="34" fill="#1B2450">|</text>
+  <text x="68" y="42" font-family="'JetBrains Mono', monospace" font-weight="700" font-size="34" fill="url(#nxGrad2)">&gt;</text>
+  <text x="92" y="41" font-family="'Space Grotesk', sans-serif" font-weight="600" font-size="26" letter-spacing="1" fill="#1B2450">EXKODE</text>
+</svg>

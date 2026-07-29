@@ -33256,7 +33256,7 @@ START: Footer CSS
 .copyright-content .social-list {
   display: flex;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
   list-style: none;
 }
 
