@@ -1,0 +1,1487 @@
+<!DOCTYPE html>
+
+<html class="no-js" lang="en" data-theme="dark">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="NEXKODE is a high-performance digital solutions agency specializing in full-stack web engineering, UI/UX design, and visual media production.">
+
+    <title>NEXKODE — Digital Solutions & Visual Media Agency</title>
+
+    <link rel="shortcut icon" type="image/png" href="./assets_files/nexkode-logo-white.png">
+    <link rel="icon" type="image/png" href="./assets_files/nexkode-logo-white.png">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="./assets_files/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./assets_files/venobox.min.css">
+    <link rel="stylesheet" href="./assets_files/odometer.min.css">
+    <link rel="stylesheet" href="./assets_files/nice-select.css">
+    <link rel="stylesheet" href="./assets_files/carouselTicker.css">
+    <link rel="stylesheet" href="./assets_files/swiper.min.css">
+    <link rel="stylesheet" href="./assets_files/main.css">
+    <style>
+        .lottie-animation-container {
+            width: var(--lottie-animation-container-width);
+            height: var(--lottie-animation-container-height);
+            background-color: var(--lottie-animation-container-background-color);
+            overflow: hidden;
+            margin: var(--lottie-animation-margin)
+        }
+
+        .lottie-animation-container svg {
+            transform: scale(var(--lottie-animation-scale))
+        }
+    </style>
+
+    <style>
+        /* ─── SMOOTH SCROLL & GPU PERF ─────────────────────────────── */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ─── MARQUEE / RUNNING-TEXT TICKER ────────────────────────── */
+        .running-text .carouselTicker__wrap,
+        .running-text.testi .carouselTicker__wrap {
+            overflow: hidden !important;
+        }
+
+        .running-text .carouselTicker__list,
+        .running-text.testi .carouselTicker__list {
+            display: flex !important;
+            width: max-content !important;
+            position: relative !important;
+            left: 0 !important;
+            flex-wrap: nowrap !important;
+            will-change: transform;
+        }
+
+        .running-text:not(.testi) .carouselTicker-nav .carouselTicker__list {
+            animation: tickerRTL 28s linear infinite;
+        }
+
+        .running-text:not(.testi) .carouselTicker-start .carouselTicker__list {
+            animation: tickerLTR 28s linear infinite;
+        }
+
+        .running-text.testi .carouselTicker__list {
+            animation: tickerRTL 22s linear infinite;
+        }
+
+        @keyframes tickerRTL {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        @keyframes tickerLTR {
+            0% {
+                transform: translateX(-50%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        .running-text:hover .carouselTicker__list {
+            animation-play-state: paused;
+        }
+
+        .running-text .carouselTicker__clone {
+            display: none !important;
+        }
+
+        .testi-carousel .swiper-wrapper {
+            transform: none !important;
+            transition: none !important;
+            display: flex;
+            will-change: transform;
+        }
+
+        .testi-carousel .swiper-slide {
+            flex-shrink: 0;
+            opacity: 1 !important;
+        }
+
+        .testi-carousel .swiper-slide-duplicate {
+            display: none !important;
+        }
+
+        /* ─── GENERAL PERFORMANCE ───────────────────────────────────── */
+        img {
+            will-change: auto;
+        }
+
+        .hero-section,
+        .about-section,
+        .service-section,
+        .process-section,
+        .faq-section,
+        .project-section,
+        .blog-section,
+        .testimonial-section,
+        .sponsor-section,
+        footer {
+            will-change: auto;
+            contain: layout style;
+        }
+
+        #scroll-percentage {
+            position: fixed !important;
+            bottom: 30px !important;
+            right: 30px !important;
+            z-index: 9999 !important;
+            transition: background 0.1s linear;
+        }
+
+        /* Preloader styles now handled by main.css (text-fill animation) */
+    </style>
+
+    <style>
+        /* ─── NAVBAR LOGO SIZE ───────────────────────────────────── */
+        .header-logo img {
+            height: 50px;
+            width: auto;
+            object-fit: contain;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="loading" data-loading-text="NEXKODE"></div>
+    </div>
+    <div id="top"></div>
+    <header class="header sticky-active">
+        <div class="primary-header">
+            <div class="primary-header-inner">
+                <div class="header-logo d-lg-block">
+                    <a href="#top">
+                        <img class="logo-dark" src="./assets_files/nexkode-logo-white.png" alt="NEXKODE Logo">
+                        <img class="logo-light" src="./assets_files/nexkode-logo-navy.png" alt="NEXKODE Logo">
+                    </a>
+                </div>
+                <div class="header-right-wrap">
+                    <div class="header-menu-wrap">
+                        <div class="mobile-menu-items" style="display: block;">
+                            <ul>
+                                <li class="active"><a href="#top">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#services">Services</a></li>
+                                <li><a href="#projects">Work</a></li>
+                                <li><a href="#faq">FAQ</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="sidebar-area" class="sidebar-area">
+        <button class="sidebar-trigger close">
+            <svg class="sidebar-close" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                x="0px" y="0px" width="16px" height="12.7px" viewBox="0 0 16 12.7"
+                style="enable-background: new 0 0 16 12.7" xml:space="preserve">
+                <g>
+                    <rect x="0" y="5.4" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -2.1569 7.5208)" width="16"
+                        height="2"></rect>
+                    <rect x="0" y="5.4" transform="matrix(0.7071 0.7071 -0.7071 0.7071 6.8431 -3.7929)" width="16"
+                        height="2"></rect>
+                </g>
+            </svg>
+        </button>
+        <div class="side-menu-content">
+            <div class="side-menu-logo">
+                <a class="dark-img" href="#"><img src="./assets_files/nexkode-logo-white.png" alt="NEXKODE logo"></a>
+                <a class="light-img" href="#"><img src="./assets_files/nexkode-logo-navy.png" alt="NEXKODE logo"></a>
+            </div>
+            <div class="side-menu-wrap"></div>
+            <div class="side-menu-about">
+                <div class="side-menu-header">
+                    <h3>About NEXKODE</h3>
+                </div>
+                <p>NEXKODE is a modern digital solutions agency. We bridge full-stack web engineering, custom backend
+                    architecture, and high-converting visual media production for growing businesses worldwide.</p>
+                <a href="#contact" class="rr-primary-btn">Start a Project</a>
+            </div>
+            <div class="side-menu-contact">
+                <div class="side-menu-header">
+                    <h3>Contact Us</h3>
+                </div>
+                <ul class="side-menu-list">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Lahore, Punjab, Pakistan</p>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <a href="tel:+923000000000">+92 300 0000000</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope-open-text"></i>
+                        <a href="mailto:contact@nexkode.com">contact@nexkode.com</a>
+                    </li>
+                </ul>
+            </div>
+            <ul class="side-menu-social">
+                <li class="linkedin"><a href="https://www.linkedin.com/company/nexkode/?viewAsMember=true"
+                        target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a></li>
+                <li class="instagram"><a href="https://www.instagram.com/nexkode_/" target="_blank" rel="noopener"><i
+                            class="fab fa-instagram"></i></a></li>
+                <li class="facebook"><a href="https://www.facebook.com/profile.php?id=61592661535479" target="_blank"
+                        rel="noopener"><i class="fab fa-facebook-f"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="smooth-wrapper" style="width: 100%; overflow: visible;">
+        <div id="smooth-content"
+            style="translate: none; rotate: none; scale: none; transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); box-sizing: border-box; width: 100%; overflow: visible;">
+
+            <!-- ═══════════════════════════════════════════════════════════
+                 VIDEO HERO SECTION — full-viewport, video background
+                 ═══════════════════════════════════════════════════════════ -->
+            <style>
+                /* ─── VIDEO HERO ─────────────────────────────────────────── */
+                .hero-video-section {
+                    position: relative;
+                    width: 100%;
+                    height: 100vh;
+                    min-height: 600px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                }
+
+                /* Full-cover background video */
+                .hero-video-section .hero-video-bg {
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    z-index: 0;
+                    pointer-events: none;
+                }
+
+                /* Dark navy gradient overlay */
+                .hero-video-section .hero-video-overlay {
+                    position: absolute;
+                    inset: 0;
+                    background: linear-gradient(160deg,
+                            rgba(15, 23, 42, 0.70) 0%,
+                            rgba(15, 23, 42, 0.90) 100%);
+                    z-index: 1;
+                }
+
+                /* Foreground content */
+                .hero-video-section .hero-video-content {
+                    position: relative;
+                    z-index: 2;
+                    text-align: center;
+                    padding: 0 1.5rem;
+                    max-width: 860px;
+                    margin: 0 auto;
+                    animation: heroFadeUp 0.9s cubic-bezier(0.22, 1, 0.36, 1) both;
+                }
+
+                @keyframes heroFadeUp {
+                    from {
+                        opacity: 0;
+                        transform: translateY(40px);
+                    }
+
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+
+                /* Eye-brow label */
+                .hero-video-section .hero-video-eyebrow {
+                    display: inline-block;
+                    font-family: 'Inter', 'Outfit', system-ui, sans-serif;
+                    font-size: 0.8rem;
+                    font-weight: 600;
+                    letter-spacing: 0.2em;
+                    text-transform: uppercase;
+                    color: #3B82F6;
+                    border: 1px solid rgba(59, 130, 246, 0.35);
+                    border-radius: 999px;
+                    padding: 0.35rem 1.1rem;
+                    margin-bottom: 1.6rem;
+                    backdrop-filter: blur(4px);
+                    background: rgba(59, 130, 246, 0.08);
+                }
+
+                /* Main headline */
+                .hero-video-section .hero-video-headline {
+                    font-family: 'Inter', 'Outfit', system-ui, sans-serif;
+                    font-size: clamp(2.6rem, 6vw, 4.8rem);
+                    font-weight: 800;
+                    line-height: 1.1;
+                    color: #ffffff;
+                    margin: 0 0 0.5rem;
+                    letter-spacing: -0.03em;
+                }
+
+                /* Electric-blue accent within headline */
+                .hero-video-section .hero-video-headline .accent {
+                    color: #3B82F6;
+                    position: relative;
+                    white-space: nowrap;
+                }
+
+                /* Subtitle */
+                .hero-video-section .hero-video-subtitle {
+                    font-family: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+                    font-size: clamp(1rem, 2vw, 1.2rem);
+                    color: rgba(226, 232, 240, 0.80);
+                    margin: 1.2rem auto 2.6rem;
+                    max-width: 560px;
+                    line-height: 1.7;
+                    font-weight: 400;
+                    letter-spacing: 0.01em;
+                }
+
+                /* CTA button group */
+                .hero-video-section .hero-video-cta {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 1rem;
+                    justify-content: center;
+                }
+
+                /* Primary CTA */
+                .hero-video-section .hero-cta-primary {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    font-family: 'Inter', 'Outfit', system-ui, sans-serif;
+                    font-size: 0.95rem;
+                    font-weight: 600;
+                    color: #fff;
+                    background: #3B82F6;
+                    border: none;
+                    border-radius: 999px;
+                    padding: 0.9rem 2.1rem;
+                    text-decoration: none;
+                    letter-spacing: 0.01em;
+                    transition: background 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+                    box-shadow: 0 4px 24px rgba(59, 130, 246, 0.35);
+                }
+
+                .hero-video-section .hero-cta-primary:hover {
+                    background: #2563EB;
+                    transform: translateY(-2px);
+                    box-shadow: 0 8px 32px rgba(59, 130, 246, 0.5);
+                    color: #fff;
+                }
+
+                /* Secondary CTA */
+                .hero-video-section .hero-cta-secondary {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 0.5rem;
+                    font-family: 'Inter', 'Outfit', system-ui, sans-serif;
+                    font-size: 0.95rem;
+                    font-weight: 600;
+                    color: #fff;
+                    background: transparent;
+                    border: 1.5px solid rgba(255, 255, 255, 0.35);
+                    border-radius: 999px;
+                    padding: 0.9rem 2.1rem;
+                    text-decoration: none;
+                    letter-spacing: 0.01em;
+                    transition: border-color 0.25s ease, background 0.25s ease, transform 0.2s ease;
+                    backdrop-filter: blur(4px);
+                }
+
+                .hero-video-section .hero-cta-secondary:hover {
+                    border-color: #3B82F6;
+                    background: rgba(59, 130, 246, 0.12);
+                    transform: translateY(-2px);
+                    color: #fff;
+                }
+
+                /* Scroll-down indicator */
+                .hero-video-section .hero-scroll-hint {
+                    position: absolute;
+                    bottom: 2rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    z-index: 2;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 0.4rem;
+                    opacity: 0.55;
+                    animation: scrollBounce 2s ease-in-out infinite;
+                }
+
+                .hero-video-section .hero-scroll-hint span {
+                    font-family: 'Inter', system-ui, sans-serif;
+                    font-size: 0.7rem;
+                    letter-spacing: 0.15em;
+                    text-transform: uppercase;
+                    color: #fff;
+                }
+
+                @keyframes scrollBounce {
+
+                    0%,
+                    100% {
+                        transform: translateX(-50%) translateY(0);
+                    }
+
+                    50% {
+                        transform: translateX(-50%) translateY(6px);
+                    }
+                }
+
+                /* Responsive tweaks */
+                @media (max-width: 576px) {
+                    .hero-video-section .hero-video-cta {
+                        flex-direction: column;
+                        align-items: center;
+                    }
+
+                    .hero-video-section .hero-cta-primary,
+                    .hero-video-section .hero-cta-secondary {
+                        width: 100%;
+                        justify-content: center;
+                    }
+                }
+            </style>
+
+            <section id="home" class="hero-video-section">
+
+                <!-- Background video -->
+                <video class="hero-video-bg" src="./assets_files/nexkode-bg.mp4" autoplay loop muted playsinline
+                    aria-hidden="true"></video>
+
+                <!-- Dark navy gradient overlay -->
+                <div class="hero-video-overlay" aria-hidden="true"></div>
+
+                <!-- Foreground content -->
+                <div class="hero-video-content">
+                    <span class="hero-video-eyebrow">Engineering &amp; Visual Media</span>
+
+                    <h1 class="hero-video-headline">
+                        Building &amp; Scaling<br>
+                        <span class="accent">Digital Products</span>
+                    </h1>
+
+                    <p class="hero-video-subtitle">
+                        Full-stack web engineering, UI/UX design, and high-converting
+                        visual media — crafted to grow your brand at every scale.
+                    </p>
+
+                    <div class="hero-video-cta">
+                        <a href="#contact" class="hero-cta-primary" id="hero-cta-start">
+                            Start a Project
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#projects" class="hero-cta-secondary" id="hero-cta-work">
+                            View Our Work
+                            <i class="fa-solid fa-play"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Subtle scroll indicator -->
+                <div class="hero-scroll-hint" aria-hidden="true">
+                    <span>Scroll</span>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" style="color:#fff">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                    </svg>
+                </div>
+
+            </section>
+            <section class="process-section pt-130 fade-wrapper">
+                <div class="bg-shape"><img src="./assets_files/process-shape.png" alt="shape"></div>
+                <div class="container">
+                    <div class="section-heading text-center">
+
+                        <h4 class="sub-heading">Our Methodology</h4>
+                        <h2 class="section-title overflow-hidden">Our 4-Step Engineering Process</h2>
+                    </div>
+                    <div class="row gy-lg-0 gy-5">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="process-item fade-top">
+                                <div class="process-icon">
+                                    <div class="icon-border"></div>
+                                    <img class="dark-img" src="./assets_files/process-1.png" alt="icon">
+                                    <img class="light-img" src="./assets_files/process-1-light.png" alt="icon">
+                                </div>
+                                <div class="process-content">
+                                    <h3 class="title">1. Discovery &amp; Strategy</h3>
+                                    <p>We analyze your target market, tech stack needs, and project architecture.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="process-item fade-top">
+                                <div class="process-icon">
+                                    <div class="icon-border"></div>
+                                    <img class="dark-img" src="./assets_files/process-2.png" alt="icon">
+                                    <img class="light-img" src="./assets_files/process-2-light.png" alt="icon">
+                                </div>
+                                <div class="process-content">
+                                    <h3 class="title">2. UI/UX &amp; Architecture</h3>
+                                    <p>Crafting intuitive interfaces paired with scalable backend database design.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="process-item fade-top">
+                                <div class="process-icon">
+                                    <div class="icon-border"></div>
+                                    <img class="dark-img" src="./assets_files/process-3.png" alt="icon">
+                                    <img class="light-img" src="./assets_files/process-3-light.png" alt="icon">
+                                </div>
+                                <div class="process-content">
+                                    <h3 class="title">3. Code &amp; Visuals</h3>
+                                    <p>Full-stack development in Next.js/Spring Boot &amp; high-converting motion media.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="process-item fade-top">
+                                <div class="process-icon">
+                                    <div class="icon-border"></div>
+                                    <img class="dark-img" src="./assets_files/process-4.png" alt="icon">
+                                    <img class="light-img" src="./assets_files/process-4-light.png" alt="icon">
+                                </div>
+                                <div class="process-content">
+                                    <h3 class="title">4. Launch &amp; Scale</h3>
+                                    <p>Rigorous QA testing, seamless cloud deployment, and performance scaling.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="process-text wow fade-in-bottom" data-wow-delay="400ms">
+                    <img class="dark-img" src="./assets_files/process-img.png" alt="process">
+                    <img class="process-img-light light-img" src="./assets_files/process-img-light.png" alt="process">
+                </div>
+            </section>
+            <section id="about" class="about-section pb-130">
+                <div class="round-shape"><img src="./assets_files/round-shape.png" alt="shape"></div>
+                <div class="about-wrap">
+                    <div class="shape"><img src="./assets_files/about-dot-shape.png" alt="shape"></div>
+                    <div class="row about-wrapper align-items-center">
+                        <div class="col-lg-7">
+                            <div class="about-content fade-wrapper">
+                                <div class="section-heading mb-0">
+
+                                    <h4 class="sub-heading active">About NEXKODE</h4>
+                                    <h2 class="section-title overflow-hidden active">Bridging Full-Stack Engineering
+                                        with High-Impact Visuals</h2>
+                                    <p class="fade-top">NEXKODE is a modern digital solutions agency. We help SaaS
+                                        startups, enterprises, and digital brands build robust web applications, sleek
+                                        user interfaces, and high-converting video and motion assets. Our goal is to
+                                        make high-performance technology effortless and accessible.</p>
+                                    <div class="about-btn fade-top">
+                                        <a href="#contact" class="rr-primary-btn">Get Started Now<i
+                                                class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-5">
+                            <div class="about-img-wrap">
+                                <div class="img-shape"></div>
+                                <div class="about-img reveal">
+                                    <img class="img-1" src="./assets_files/about-img.jpg" alt="NEXKODE team working"
+                                        loading="lazy">
+                                </div>
+                                <div class="about-img-2 reveal">
+                                    <img class="img-2" src="./assets_files/about-img-1.jpg" alt="NEXKODE workspace"
+                                        loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-text">
+                        <img class="dark-img" src="./assets_files/about-text.png" alt="about">
+                        <img class="light-img" src="./assets_files/about-text-light.png" alt="about">
+                    </div>
+                </div>
+            </section>
+            <section id="services" class="service-section pb-130 fade-wrapper">
+                <div class="shape"><img src="./assets_files/service-shape-1.png" alt="shape"></div>
+                <div class="bg-color"></div>
+                <div class="container">
+                    <div class="section-heading text-center">
+
+                        <h4 class="sub-heading">What We Offer</h4>
+                        <h2 class="section-title">NEXKODE Core Services</h2>
+                    </div>
+                    <div class="row gy-lg-0 gy-4">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item md-pb-30 fade-top">
+                                <h4 class="service-text"><a href="#contact">/Full-Stack Engineering</a></h4>
+                                <div class="service-thumb">
+                                    <div class="overlay-color"></div>
+                                    <div class="transparent-shape"><img src="./assets_files/service-shape.png"
+                                            alt="shape"></div>
+                                    <img src="./assets_files/service-1.jpg" alt="Full-stack engineering" loading="lazy">
+                                    <div class="service-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polyline points="16 18 22 12 16 6" />
+                                            <polyline points="8 6 2 12 8 18" />
+                                        </svg>
+                                    </div>
+                                    <a href="#contact" class="service-btn">Get Quote <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item md-pb-30 fade-top">
+                                <h4 class="service-text"><a href="#contact">/UI-UX &amp; Product Design</a></h4>
+                                <div class="service-thumb">
+                                    <div class="overlay-color"></div>
+                                    <div class="transparent-shape"><img src="./assets_files/service-shape.png"
+                                            alt="shape"></div>
+                                    <img src="./assets_files/service-2.jpg" alt="UI UX Design" loading="lazy">
+                                    <div class="service-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <circle cx="12" cy="12" r="10" />
+                                            <path d="M8 14s1.5 2 4 2 4-2 4-2" />
+                                            <line x1="9" y1="9" x2="9.01" y2="9" />
+                                            <line x1="15" y1="9" x2="15.01" y2="9" />
+                                        </svg>
+                                    </div>
+                                    <a href="#contact" class="service-btn">Get Quote <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item item-3 fade-top">
+                                <h4 class="service-text"><a href="#contact">/Visual Media &amp; Motion</a></h4>
+                                <div class="service-thumb">
+                                    <div class="overlay-color"></div>
+                                    <div class="transparent-shape"><img src="./assets_files/service-shape.png"
+                                            alt="shape"></div>
+                                    <img src="./assets_files/service-3.jpg" alt="Visual media" loading="lazy">
+                                    <div class="service-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <polygon points="23 7 16 12 23 17 23 7" />
+                                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                                        </svg>
+                                    </div>
+                                    <a href="#contact" class="service-btn">Get Quote <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="service-item item-3 fade-top">
+                                <h4 class="service-text"><a href="#contact">/Social Media Management</a></h4>
+                                <div class="service-thumb">
+                                    <div class="overlay-color"></div>
+                                    <div class="transparent-shape"><img src="./assets_files/service-shape.png"
+                                            alt="shape"></div>
+                                    <img src="./assets_files/service-4.jpg" alt="Social Media Management" loading="lazy">
+                                    <div class="service-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
+                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round">
+                                            <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" />
+                                        </svg>
+                                    </div>
+                                    <a href="#contact" class="service-btn">Get Quote <i
+                                            class="fa-solid fa-arrow-right"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="faq" class="faq-section pt-130 pb-130">
+                <div class="faq-shape"><img src="./assets_files/faq-shape-1.png" alt="shape"></div>
+                <div class="faq-top-shape"></div>
+                <div class="container">
+                    <div class="row gy-lg-0 gy-4">
+                        <div class="col-xl-6 col-lg-12 col-md-12">
+                            <div class="faq-content">
+                                <div class="section-heading">
+
+                                    <h4 class="sub-heading after-none">Got Questions?</h4>
+                                    <h2 class="section-title">Digital Solutions That Drive Real Growth</h2>
+                                </div>
+                                <div class="accordion fade-wrapper" id="accordionExampleTwo">
+                                    <div class="accordion-item fade-top">
+                                        <h2 class="accordion-header" id="headingFour">
+                                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                                data-bs-target="#collapseFour" aria-expanded="true"
+                                                aria-controls="collapseFour">
+                                                What tech stacks does NEXKODE build with?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFour" class="accordion-collapse collapse show"
+                                            aria-labelledby="headingTwo" data-bs-parent="#accordionExampleTwo">
+                                            <div class="accordion-body">
+                                                We engineer using enterprise-grade, modern web stacks including Next.js,
+                                                React, Spring Boot, Node.js, Tailwind CSS, and cloud platforms like AWS
+                                                and GCP.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item fade-top">
+                                        <h2 class="accordion-header" id="headingFive">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseFive"
+                                                aria-expanded="false" aria-controls="collapseFive">
+                                                Do you handle both web development and video/media production?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseFive" class="accordion-collapse collapse"
+                                            aria-labelledby="headingFive" data-bs-parent="#accordionExampleTwo">
+                                            <div class="accordion-body">
+                                                Yes! NEXKODE bridges full-stack software development with
+                                                high-converting video reels, motion graphics, and product UI/UX under
+                                                one roof.
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="accordion-item fade-top">
+                                        <h2 class="accordion-header" id="headingSix">
+                                            <button class="accordion-button collapsed" type="button"
+                                                data-bs-toggle="collapse" data-bs-target="#collapseSix"
+                                                aria-expanded="false" aria-controls="collapseSix">
+                                                What is your typical project turnaround time?
+                                            </button>
+                                        </h2>
+                                        <div id="collapseSix" class="accordion-collapse collapse"
+                                            aria-labelledby="headingSix" data-bs-parent="#accordionExampleTwo">
+                                            <div class="accordion-body">
+                                                Landing pages and brand media assets take roughly 1–2 weeks, while
+                                                full-stack SaaS apps or enterprise software take 4–8 weeks depending on
+                                                scope.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-12 col-md-12">
+                            <div class="faq-img reveal text-center">
+                                <img src="./assets_files/faq-img.png" alt="NEXKODE FAQ" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- MEET THE FOUNDER SECTION - COMMENTED OUT
+            <div class="running-text testi">
+                <div class="carouselTicker carouselTicker-nav" data-speed="fast" data-lag="0">
+                    <div class="carouselTicker__wrap">
+                        <ul class="text-anim carouselTicker__list">
+                            <li>Meet My Team .</li>
+                            <li>The People Behind NEXKODE</li>
+                            <li>Meet My Team .</li>
+                            <li>The People Behind NEXKODE</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <section class="testimonial-section overflow-hidden">
+                <div class="container">
+                    <div class="testi-carousel swiper" id="testiSwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="testi-item text-center">
+                                    <div class="testi-thumb"><img src="./assets_files/team-hassan-sheikh.jpg"
+                                            alt="Hassan Ali Sheikh" loading="lazy"></div>
+                                    <div class="testi-content">
+                                        <h3 class="author">Hassan Ali Sheikh <span>Founder &amp; CEO @ NEXKODE</span>
+                                        </h3>
+                                        <p>"I started NEXKODE to bridge the gap between world-class engineering and
+                                            design that actually converts. Every product we ship reflects that
+                                            obsession with speed, craft, and measurable business impact."</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testi-item text-center">
+                                    <div class="testi-thumb"><img src="./assets_files/team-shahab-saqid.jpg"
+                                            alt="Shahab Saqid" loading="lazy"></div>
+                                    <div class="testi-content">
+                                        <h3 class="author">Shahab Saqid <span>Co-Founder &amp; COO @ NEXKODE</span></h3>
+                                        <p>"My focus is making sure every project runs like clockwork — from
+                                            planning and delivery timelines to client communication. Operational
+                                            excellence is what lets our engineers and designers do their best work."</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="testi-item text-center">
+                                    <div class="testi-thumb"><img src="./assets_files/team-abdullah-ali.jpg"
+                                            alt="Abdullah Ali" loading="lazy"></div>
+                                    <div class="testi-content">
+                                        <h3 class="author">Abdullah Ali <span>Technical Lead @ NEXKODE</span></h3>
+                                        <p>"I lead our engineering team with a focus on clean architecture and
+                                            scalable systems. Whether it's a complex backend or a pixel-perfect
+                                            frontend, I make sure what we ship is fast, reliable, and built to
+                                            last."</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+            </section>
+            END MEET THE FOUNDER SECTION -->
+            <section id="projects" class="project-section pt-130 pb-130">
+                <div class="container">
+                    <div class="project-top heading-space align-items-end fade-wrapper">
+                        <div class="section-heading mb-0">
+
+                            <h4 class="sub-heading after-none">Recent Deliveries</h4>
+                            <h2 class="section-title">Explore Our Recent Project Showcase</h2>
+                        </div>
+                        <div class="project-top-btn fade-top">
+                            <a href="#contact" class="rr-primary-btn">Start Your Project<i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-accordion fade-wrapper">
+                        <div class="accordion" id="projectAccordion">
+                            <div class="accordion-item project-item fade-top">
+                                <h2 class="accordion-header" id="headingOne">
+                                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                        <span class="project-content">
+                                            <span class="number">01</span>
+                                            <span class="project-right">
+                                                <span class="category">Factory Management System</span>
+                                                <span class="title">Prime Raw &mdash; Inventory Automation
+                                                    Platform</span>
+                                            </span>
+                                        </span>
+                                    </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse show"
+                                    aria-labelledby="headingOne" data-bs-parent="#projectAccordion">
+                                    <div class="accordion-body">
+                                        <div class="hover-content">
+                                            <div class="content-left">
+                                                <p>Built a full factory management system for Prime Raw, a pet food
+                                                    manufacturing company, to automate their entire inventory
+                                                    workflow &mdash; production logging, raw materials, and
+                                                    product tracking &mdash; using their existing barcodes scanned
+                                                    directly through a phone app.</p>
+                                                <a href="https://prime-raw-five.vercel.app/dashboard" target="_blank"
+                                                    rel="noopener" class="rr-primary-btn">View Details<i
+                                                        class="fa-solid fa-arrow-right"></i></a>
+                                            </div>
+                                            <div class="content-right">
+                                                <div class="project-thumb">
+                                                    <div class="browser-frame">
+                                                        <div class="browser-frame-bar">
+                                                            <span class="bf-dot bf-dot-red"></span>
+                                                            <span class="bf-dot bf-dot-yellow"></span>
+                                                            <span class="bf-dot bf-dot-green"></span>
+                                                            <div class="bf-address">prime-raw-five.vercel.app/dashboard
+                                                            </div>
+                                                        </div>
+                                                        <div class="browser-frame-body">
+                                                            <img class="pr-thumb pr-thumb-dark"
+                                                                src="./assets_files/project-primeraw-dark.jpg"
+                                                                alt="Prime Raw factory management dashboard"
+                                                                loading="lazy">
+                                                            <img class="pr-thumb pr-thumb-light"
+                                                                src="./assets_files/project-primeraw.jpg"
+                                                                alt="Prime Raw factory management dashboard"
+                                                                loading="lazy">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion-item project-item fade-top">
+                                <h2 class="accordion-header" id="headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                        <span class="project-content">
+                                            <span class="number">02</span>
+                                            <span class="project-right">
+                                                <span class="category">SaaS Platform</span>
+                                                <span class="title">QuickHire &mdash; AI-Powered Hiring Platform</span>
+                                            </span>
+                                        </span>
+                                    </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                    data-bs-parent="#projectAccordion">
+                                    <div class="accordion-body">
+                                        <div class="hover-content">
+                                            <div class="content-left">
+                                                <p>Built QuickHire, a SaaS platform that makes hiring faster:
+                                                    candidates simply upload their resume and AI extracts and
+                                                    scores their profile, while recruiters get AI-powered natural
+                                                    language search to find the right candidate in seconds.</p>
+                                                <a href="https://www.quickhire.works/" target="_blank" rel="noopener"
+                                                    class="rr-primary-btn">View Details<i
+                                                        class="fa-solid fa-arrow-right"></i></a>
+                                            </div>
+                                            <div class="content-right">
+                                                <div class="project-thumb">
+                                                    <div class="browser-frame">
+                                                        <div class="browser-frame-bar">
+                                                            <span class="bf-dot bf-dot-red"></span>
+                                                            <span class="bf-dot bf-dot-yellow"></span>
+                                                            <span class="bf-dot bf-dot-green"></span>
+                                                            <div class="bf-address">quickhire.works</div>
+                                                        </div>
+                                                        <div class="browser-frame-body">
+                                                            <img class="qh-thumb qh-thumb-dark"
+                                                                src="./assets_files/project-quickhire.jpg"
+                                                                alt="QuickHire talent search platform" loading="lazy">
+                                                            <img class="qh-thumb qh-thumb-light"
+                                                                src="./assets_files/project-quickhire-light.jpg"
+                                                                alt="QuickHire talent search platform" loading="lazy">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="running-text running-1">
+                <div class="carouselTicker carouselTicker-nav" data-speed="fast" data-lag="0">
+                    <div class="carouselTicker__wrap">
+                        <ul class="text-anim carouselTicker__list">
+                            <li>FULL-STACK ENGINEERING</li>
+                            <li>SPRING BOOT</li>
+                            <li>NEXT.JS</li>
+                            <li>REACT</li>
+                            <li>VISUAL MEDIA</li>
+                            <li>MOTION GRAPHICS</li>
+                            <li>UI/UX DESIGN</li>
+                            <li>CLOUD ARCHITECTURE</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="running-text">
+                <div class="carouselTicker carouselTicker-start" data-speed="fast" data-lag="0">
+                    <div class="carouselTicker__wrap">
+                        <ul class="text-anim carouselTicker__list">
+                            <li>FULL-STACK ENGINEERING</li>
+                            <li>SPRING BOOT</li>
+                            <li>NEXT.JS</li>
+                            <li>REACT</li>
+                            <li>VISUAL MEDIA</li>
+                            <li>MOTION GRAPHICS</li>
+                            <li>UI/UX DESIGN</li>
+                            <li>CLOUD ARCHITECTURE</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog section temporarily disabled
+            <section class="blog-section pt-130 pb-130 fade-wrapper">
+                <div class="container">
+                    <div class="section-heading text-center">
+
+                        <h4 class="sub-heading">ENGINEERING INSIGHTS</h4>
+                        <h2 class="section-title">Latest From NEXKODE Tech Blog</h2>
+                    </div>
+                    <div class="post-wrap">
+                        <div class="post-card-wrap fade-top">
+                            <div class="post-card">
+                                <div class="post-thumb">
+                                    <img src="./assets_files/post-1.jpg" alt="Blog post" loading="lazy">
+                                </div>
+                                <div class="post-content-wrap">
+                                    <div class="post-content">
+                                        <ul class="post-meta">
+                                            <li><i class="fa-solid fa-clock"></i>July 2026</li>
+                                            <li><i class="fa-solid fa-user"></i>By NEXKODE Tech</li>
+                                        </ul>
+                                        <h3 class="title"><a href="#">Why Next.js and Spring Boot Are the Ultimate
+                                                Enterprise Stack</a></h3>
+                                        <a href="#contact" class="rr-primary-btn blog-btn">Read Article <i
+                                                class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-card-wrap fade-top">
+                            <div class="post-card">
+                                <div class="post-thumb">
+                                    <img src="./assets_files/post-2.jpg" alt="Blog post" loading="lazy">
+                                </div>
+                                <div class="post-content-wrap">
+                                    <div class="post-content">
+                                        <ul class="post-meta">
+                                            <li><i class="fa-solid fa-clock"></i>July 2026</li>
+                                            <li><i class="fa-solid fa-user"></i>By NEXKODE Media</li>
+                                        </ul>
+                                        <h3 class="title"><a href="#">How High-Converting Motion Graphics Double SaaS
+                                                Landing Page Conversions</a></h3>
+                                        <a href="#contact" class="rr-primary-btn blog-btn">Read Article <i
+                                                class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post-card-wrap fade-top">
+                            <div class="post-card">
+                                <div class="post-thumb">
+                                    <img src="./assets_files/post-3.jpg" alt="Blog post" loading="lazy">
+                                </div>
+                                <div class="post-content-wrap">
+                                    <div class="post-content">
+                                        <ul class="post-meta">
+                                            <li><i class="fa-solid fa-clock"></i>July 2026</li>
+                                            <li><i class="fa-solid fa-user"></i>By NEXKODE DevOps</li>
+                                        </ul>
+                                        <h3 class="title"><a href="#">Optimizing Core Web Vitals for Sub-100ms API
+                                                Response Times</a></h3>
+                                        <a href="#contact" class="rr-primary-btn blog-btn">Read Article <i
+                                                class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            -->
+            <section class="sponsor-section pb-130">
+                <div class="container">
+                    <div class="sponsor-wrap">
+                        <div class="sponsor-item item-1">
+                            <h3 class="title">ENGINEERED WITH <br>MODERN TECH <br> STACKS</h3>
+                        </div>
+                        <!-- React -->
+                        <div class="sponsor-item">
+                            <a href="https://react.dev" target="_blank" title="React"
+                                style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.9 595.3"
+                                    style="height:44px;width:auto;">
+                                    <g fill="#61DAFB">
+                                        <path
+                                            d="M666.3 296.5c0-32.5-40.7-63.3-103.1-82.4 14.4-63.6 8-114.2-20.2-130.4-6.5-3.8-14.1-5.6-22.4-5.6v22.3c4.6 0 8.3.9 11.4 2.6 13.6 7.8 19.5 37.5 14.9 75.7-1.1 9.4-2.9 19.3-5.1 29.4-19.6-4.8-41-8.5-63.5-10.9-13.5-18.5-27.5-35.3-41.6-50 32.6-30.3 63.2-46.9 84-46.9V78c-27.5 0-63.5 19.6-99.9 53.6-36.4-33.8-72.4-53.2-99.9-53.2v22.3c20.7 0 51.4 16.5 84 46.6-14 14.7-28 31.4-41.3 49.9-22.6 2.4-44 6.1-63.6 11-2.3-10-4-19.7-5.2-29-4.7-38.2 1.1-67.9 14.6-75.8 3-1.8 6.9-2.6 11.5-2.6V78.5c-8.4 0-16 1.8-22.6 5.6-28.1 16.2-34.4 66.7-19.9 130.1-62.2 19.2-102.7 49.9-102.7 82.3 0 32.5 40.7 63.3 103.1 82.4-14.4 63.6-8 114.2 20.2 130.4 6.5 3.8 14.1 5.6 22.5 5.6 27.5 0 63.5-19.6 99.9-53.6 36.4 33.8 72.4 53.2 99.9 53.2 8.4 0 16-1.8 22.6-5.6 28.1-16.2 34.4-66.7 19.9-130.1 62-19.1 102.5-49.9 102.5-82.3zm-130.2-66.7c-3.7 12.9-8.3 26.2-13.5 39.5-4.1-8-8.4-16-13.1-24-4.6-8-9.5-15.8-14.4-23.4 14.2 2.1 27.9 4.7 41 7.9zm-45.8 106.5c-7.8 13.5-15.8 26.3-24.1 38.2-14.9 1.3-30 2-45.2 2-15.1 0-30.2-.7-45-1.9-8.3-11.9-16.4-24.6-24.2-38-7.6-13.1-14.5-26.4-20.8-39.8 6.2-13.4 13.2-26.8 20.7-39.9 7.8-13.5 15.8-26.3 24.1-38.2 14.9-1.3 30-2 45.2-2 15.1 0 30.2.7 45 1.9 8.3 11.9 16.4 24.6 24.2 38 7.6 13.1 14.5 26.4 20.8 39.8-6.3 13.4-13.2 26.8-20.7 39.9zm32.3-13c5.4 13.4 10 26.8 13.8 39.8-13.1 3.2-26.9 5.9-41.2 8 4.9-7.7 9.8-15.6 14.4-23.7 4.6-8 8.9-16.1 13-24.1zM421.2 430c-9.3-9.6-18.6-20.3-27.8-32 9 .4 18.2.7 27.5.7 9.4 0 18.7-.2 27.8-.7-9 11.7-18.3 22.4-27.5 32zm-74.4-58.9c-14.2-2.1-27.9-4.7-41-7.9 3.7-12.9 8.3-26.2 13.5-39.5 4.1 8 8.4 16 13.1 24 4.7 8 9.5 15.8 14.4 23.4zM420.7 163c9.3 9.6 18.6 20.3 27.8 32-9-.4-18.2-.7-27.5-.7-9.4 0-18.7.2-27.8.7 9-11.7 18.3-22.4 27.5-32zm-74 58.9c-4.9 7.7-9.8 15.6-14.4 23.7-4.6 8-8.9 16.1-13 24.1-5.4-13.4-10-26.8-13.8-39.8 13.1-3.1 26.9-5.8 41.2-7.9zm-90.5 125.2c-35.4-15.1-58.3-34.9-58.3-50.6 0-15.7 22.9-35.6 58.3-50.6 8.6-3.7 18-7 27.7-10.1 5.7 19.6 13.2 40 22.5 60.9-9.2 20.8-16.6 41.1-22.2 60.6-9.9-3.1-19.3-6.5-28-10.2zM310 490c-13.6-7.8-19.5-37.5-14.9-75.7 1.1-9.4 2.9-19.3 5.1-29.4 19.6 4.8 41 8.5 63.5 10.9 13.5 18.5 27.5 35.3 41.6 50-32.6 30.3-63.2 46.9-84 46.9-4.5-.1-8.3-1-11.3-2.7zm237.2-76.2c4.7 38.2-1.1 67.9-14.6 75.8-3 1.8-6.9 2.6-11.5 2.6-20.7 0-51.4-16.5-84-46.6 14-14.7 28-31.4 41.3-49.9 22.6-2.4 44-6.1 63.6-11 2.3 10.1 4.1 19.8 5.2 29.1zm38.5-66.7c-8.6 3.7-18 7-27.7 10.1-5.7-19.6-13.2-40-22.5-60.9 9.2-20.8 16.6-41.1 22.2-60.6 9.9 3.1 19.3 6.5 28.1 10.2 35.4 15.1 58.3 34.9 58.3 50.6-.1 15.7-23 35.6-58.4 50.6z" />
+                                        <circle cx="420.9" cy="296.5" r="45.7" />
+                                    </g>
+                                </svg>
+                                <span
+                                    style="color:currentColor;font-size:1.1rem;font-weight:600;opacity:.85;">React</span>
+                            </a>
+                        </div>
+                        <!-- Next.js -->
+                        <div class="sponsor-item">
+                            <a href="https://nextjs.org" target="_blank" title="Next.js"
+                                style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 394 394"
+                                    style="height:44px;width:auto;">
+                                    <defs>
+                                        <linearGradient id="nj-grad" x1="55%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" style="stop-color:#fff;stop-opacity:1" />
+                                            <stop offset="100%" style="stop-color:#aaa;stop-opacity:1" />
+                                        </linearGradient>
+                                    </defs>
+                                    <circle cx="197" cy="197" r="197" fill="#000" />
+                                    <path fill="url(#nj-grad)" d="M119 135h24v94l73-94h26v124h-24v-94l-74 94H119z" />
+                                    <path fill="#fff" d="M271 259l-58-84 14-18 72 102z" />
+                                </svg>
+                                <span
+                                    style="color:currentColor;font-size:1.1rem;font-weight:600;opacity:.85;">Next.js</span>
+                            </a>
+                        </div>
+                        <!-- Node.js -->
+                        <div class="sponsor-item">
+                            <a href="https://nodejs.org" target="_blank" title="Node.js"
+                                style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"
+                                    style="height:44px;width:auto;">
+                                    <path fill="#539E43"
+                                        d="M224 508c-6.7 0-13.5-1.8-19.4-5.2l-61.7-36.5c-9.2-5.2-4.7-7-1.7-8 12.3-4.3 14.8-5.2 27.9-12.7 1.4-.8 3.2-.5 4.6.4l47.4 28.1c1.7 1 4.1 1 5.7 0l184.7-106.6c1.7-1 2.8-3 2.8-5V149.3c0-2.1-1.1-4-2.9-5.1L226.8 37.7c-1.7-1-4-1-5.7 0L36.6 144.3c-1.8 1.1-2.9 3-2.9 5.1v213.1c0 2 1.1 4 2.9 4.9l50.6 29.2c27.5 13.7 44.3-2.4 44.3-18.7V167.5c0-3 2.4-5.3 5.4-5.3h23.4c2.9 0 5.4 2.3 5.4 5.3V378c0 36.6-20 57.6-54.7 57.6-10.7 0-19.1 0-42.5-11.6l-48.4-27.9C8.1 389.2.7 376.3.7 362.4V149.3c0-13.8 7.4-26.8 19.4-33.7L184.6 9c11.7-6.6 27.2-6.6 38.8 0l164.5 106.7c12 6.9 19.4 19.8 19.4 33.7v213.1c0 13.8-7.4 26.7-19.4 33.7L243.4 502.8c-5.9 3.4-12.6 5.2-19.4 5.2zm149.1-208.1c0-39.9-27-50.5-83.7-58-57.4-7.6-63.2-11.5-63.2-24.9 0-11.1 4.9-25.9 47.4-25.9 37.9 0 51.9 8.2 57.7 33.8.5 2.4 2.7 4.2 5.2 4.2h24c1.5 0 2.9-.6 3.9-1.7s1.5-2.6 1.4-4.1c-3.7-44.1-33-64.6-92.2-64.6-52.7 0-84.1 22.2-84.1 59.5 0 40.4 31.3 51.6 81.8 56.6 60.5 5.9 65.2 14.8 65.2 26.7 0 20.6-16.6 29.4-55.5 29.4-48.9 0-59.6-12.3-63.2-36.6-.4-2.6-2.6-4.5-5.3-4.5h-23.9c-3 0-5.3 2.4-5.3 5.3 0 31.1 16.9 68.2 97.8 68.2 58.4-.1 91.8-23 91.8-62.4z" />
+                                </svg>
+                                <span
+                                    style="color:currentColor;font-size:1.1rem;font-weight:600;opacity:.85;">Node.js</span>
+                            </a>
+                        </div>
+                        <!-- Spring Boot -->
+                        <div class="sponsor-item">
+                            <a href="https://spring.io/projects/spring-boot" target="_blank" title="Spring Boot"
+                                style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+                                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg"
+                                    alt="Spring Boot" style="height:44px;width:auto;">
+                                <span style="color:currentColor;font-size:1.1rem;font-weight:600;opacity:.85;">Spring
+                                    Boot</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <footer id="contact" class="footer-section bg-dark-1">
+                <div class="shape"><img src="./assets_files/footer-shape.png" alt="footer"></div>
+                <div class="container">
+                    <div class="row footer-wrap">
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget">
+                                <div class="widget-header">
+                                    <div class="footer-logo">
+                                        <a href="#"><img src="./assets_files/nexkode-logo-white.png"
+                                                alt="NEXKODE Logo"></a>
+                                    </div>
+                                </div>
+                                <p class="mb-20">NEXKODE builds and scales high-performance web applications, modern
+                                    UI/UX design systems, and dynamic visual media.</p>
+                                <h4 class="title">WORKING HOURS <span>Mon - Sat: 09:00 AM - 06:00 PM</span></h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget footer-col-2">
+                                <div class="widget-header">
+                                    <h3 class="widget-title">Quick Links</h3>
+                                </div>
+                                <ul class="footer-list">
+                                    <li><a href="#about">About NEXKODE</a></li>
+                                    <li><a href="#services">Our Services</a></li>
+                                    <li><a href="#projects">Recent Work</a></li>
+                                    <li><a href="#faq">FAQ</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget">
+                                <div class="widget-header">
+                                    <h3 class="widget-title">Contact Us</h3>
+                                </div>
+                                <ul class="address-list">
+                                    <li><a href="mailto:hassan@nexkode.com">hassan@nexkode.com</a></li>
+                                    <li><a href="mailto:info@nexkode.com">info@nexkode.com</a></li>
+                                    <li>Lahore, Punjab, Pakistan</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                            <div class="footer-widget">
+                                <div class="widget-header">
+                                    <h3 class="widget-title">Subscribe Newsletter</h3>
+                                </div>
+                                <div class="footer-form mb-20">
+                                    <form action="#" class="rr-subscribe-form">
+                                        <input class="form-control" type="email" name="email"
+                                            placeholder="Enter your email">
+                                        <input type="hidden" name="action" value="mailchimpsubscribe">
+                                        <button class="submit">Join</button>
+                                        <div class="clearfix"></div>
+                                    </form>
+                                </div>
+                                <div class="form-check form-item">
+                                    <input class="form-check-input" type="checkbox" value="" id="man" checked>
+                                    <label class="form-check-label" for="man">
+                                        I agree to receive project updates and technology insights.
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="copyright-area">
+                    <div class="container">
+                        <div class="row copyright-content">
+                            <div class="col-md-6">
+                                <p>© 2026 NEXKODE. All Rights Reserved.</p>
+                            </div>
+                            <div class="col-md-6">
+                                <ul class="social-list">
+                                    <li class="linkedin">
+                                        <a href="https://www.linkedin.com/company/nexkode/?viewAsMember=true"
+                                            target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                    <li class="facebook">
+                                        <a href="https://www.facebook.com/profile.php?id=61592661535479" target="_blank"
+                                            rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="instagram">
+                                        <a href="https://www.instagram.com/nexkode_/" target="_blank" rel="noopener"><i
+                                                class="fab fa-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <div id="scroll-percentage"
+        style="background: conic-gradient( var(--rr-color-theme-primary) 0%, var(--rr-color-common-white) 0%);"><span
+            id="scroll-percentage-value">0%</span></div>
+
+    <div id="theme-toogle" class="switcher-button" aria-label="dark">
+        <div class="switcher-button-inner-left"></div>
+        <div class="switcher-button-inner"></div>
+    </div>
+
+    <script src="./assets_files/jquary-3.6.0.min.js.download" defer></script>
+    <script src="./assets_files/bootstrap-bundle.js.download" defer></script>
+    <script src="./assets_files/imagesloaded-pkgd.js.download" defer></script>
+    <script src="./assets_files/waypoints.min.js.download" defer></script>
+    <script src="./assets_files/venobox.min.js.download" defer></script>
+    <script src="./assets_files/odometer.min.js.download" defer></script>
+    <script src="./assets_files/meanmenu.js.download" defer></script>
+    <script src="./assets_files/jquery.isotope.js.download" defer></script>
+    <script src="./assets_files/swiper.min.js.download" defer></script>
+    <script src="./assets_files/split-type.min.js.download" defer></script>
+    <script src="./assets_files/gsap.min.js.download" defer></script>
+    <script src="./assets_files/scroll-trigger.min.js.download" defer></script>
+    <script src="./assets_files/scroll-smoother.js.download" defer></script>
+    <script src="./assets_files/jquery.carouselTicker.js.download" defer></script>
+    <script src="./assets_files/nice-select.js.download" defer></script>
+    <script src="./assets_files/slider.js.download" defer></script>
+    <script src="./assets_files/contact.js.download" defer></script>
+    <script src="./assets_files/magiccursor.js.download" defer></script>
+    <script src="./assets_files/main.js.download" defer></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var testiSwiper = new Swiper('#testiSwiper', {
+                loop: true,
+                speed: 800,
+                autoplay: {
+                    delay: 3000,
+                    disableOnInteraction: false,
+                    pauseOnMouseEnter: true,
+                },
+                slidesPerView: 3,
+                spaceBetween: 30,
+                centeredSlides: false,
+                pagination: {
+                    el: '#testiSwiper .swiper-pagination',
+                    clickable: true,
+                },
+                breakpoints: {
+                    0: { slidesPerView: 1 },
+                    768: { slidesPerView: 2 },
+                    992: { slidesPerView: 3 },
+                },
+                grabCursor: true,
+            });
+
+            /* Preloader hide handled by main.js via jQuery fadeOut */
+
+            var pct = document.getElementById('scroll-percentage');
+            var val = document.getElementById('scroll-percentage-value');
+            var header = document.querySelector('.header');
+            var ticking = false;
+
+            function onScrollFrame() {
+                var scrollTop = window.scrollY || document.documentElement.scrollTop;
+                var docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                var progress = docHeight > 0 ? Math.round((scrollTop / docHeight) * 100) : 0;
+
+                if (pct) pct.style.background =
+                    'conic-gradient(var(--rr-color-theme-primary) ' + progress + '%, var(--rr-color-common-white) ' + progress + '%)';
+                if (val) val.textContent = progress + '%';
+
+                if (scrollTop > 80) {
+                    header && header.classList.add('fixed');
+                } else {
+                    header && header.classList.remove('fixed');
+                }
+                ticking = false;
+            }
+
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    requestAnimationFrame(onScrollFrame);
+                    ticking = true;
+                }
+            }, { passive: true });
+        });
+    </script>
+    <!-- Newsletter success modal -->
+    <div id="newsletter-success-modal" class="rr-newsletter-modal-overlay" aria-hidden="true">
+        <div class="rr-newsletter-modal" role="dialog" aria-modal="true" aria-labelledby="newsletter-success-title">
+            <button type="button" class="rr-newsletter-modal-close" aria-label="Close">&times;</button>
+            <div class="rr-newsletter-modal-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M20 6 9 17l-5-5" />
+                </svg>
+            </div>
+            <h3 id="newsletter-success-title">Done!</h3>
+            <p>You're subscribed — thanks for joining the NEXKODE newsletter.</p>
+            <button type="button" class="rr-newsletter-modal-ok">Okay</button>
+        </div>
+    </div>
+
+    <style>
+        .rr-newsletter-modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(2, 5, 10, 0.65);
+            z-index: 9999;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .rr-newsletter-modal-overlay.active {
+            display: flex;
+        }
+
+        .rr-newsletter-modal {
+            position: relative;
+            background: #11151C;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 14px;
+            max-width: 360px;
+            width: 100%;
+            padding: 40px 30px 32px;
+            text-align: center;
+            font-family: 'Inter', system-ui, sans-serif;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .rr-newsletter-modal-close {
+            position: absolute;
+            top: 12px;
+            right: 14px;
+            background: none;
+            border: none;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 22px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .rr-newsletter-modal-close:hover {
+            color: #fff;
+        }
+
+        .rr-newsletter-modal-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            background: rgba(59, 130, 246, 0.15);
+            color: #3B82F6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .rr-newsletter-modal h3 {
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .rr-newsletter-modal p {
+            color: rgba(255, 255, 255, 0.65);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .rr-newsletter-modal-ok {
+            background: #3B82F6;
+            color: #fff;
+            border: none;
+            border-radius: 999px;
+            padding: 10px 32px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+
+        .rr-newsletter-modal-ok:hover {
+            background: #2563eb;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var form = document.querySelector('.rr-subscribe-form');
+            var modal = document.getElementById('newsletter-success-modal');
+
+            function openModal() {
+                modal.classList.add('active');
+            }
+
+            function closeModal() {
+                modal.classList.remove('active');
+            }
+
+            if (form && modal) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    var emailInput = form.querySelector('input[name="email"]');
+                    if (emailInput && !emailInput.checkValidity()) {
+                        emailInput.reportValidity();
+                        return;
+                    }
+                    openModal();
+                    form.reset();
+                });
+
+                modal.querySelector('.rr-newsletter-modal-close').addEventListener('click', closeModal);
+                modal.querySelector('.rr-newsletter-modal-ok').addEventListener('click', closeModal);
+                modal.addEventListener('click', function (e) {
+                    if (e.target === modal) closeModal();
+                });
+            }
+        });
+    </script>
+
+</body>
+
+</html>
