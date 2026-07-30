@@ -1,0 +1,25 @@
+# NEXKODE
+
+> NEXKODE is a high-performance digital solutions agency specializing in full-stack web engineering, UI/UX design, and visual media production.
+
+## Core Services
+
+- [Full-Stack Engineering](https://www.nexkode.com/#services): Enterprise-grade web application development using Next.js, React, Spring Boot, Node.js, Tailwind CSS, and cloud platforms (AWS/GCP).
+- [UI/UX & Product Design](https://www.nexkode.com/#services): Modern interface design, design systems, and conversion-focused user experiences.
+- [Visual Media & Motion](https://www.nexkode.com/#services): High-converting video reels, motion graphics, and digital media production.
+- [Social Media Management](https://www.nexkode.com/#services): Strategic digital brand management and social content optimization.
+
+## Key Sections & Pages
+
+- [Home](https://www.nexkode.com/#home): Main landing experience highlighting NEXKODE's core value propositions and digital solutions.
+- [About NEXKODE](https://www.nexkode.com/#about): Detailed agency background, mission statement, and technical engineering approach.
+- [Methodology](https://www.nexkode.com/#home): 4-step engineering process covering Discovery & Strategy, UI/UX & Architecture, Code & Visuals, and Launch & Scale.
+- [Recent Deliveries](https://www.nexkode.com/#projects): Portfolio showcase featuring Prime Raw (Factory Inventory Automation Platform) and QuickHire (AI-Powered Hiring SaaS Platform).
+- [FAQ](https://www.nexkode.com/#faq): Technical details on supported technology stacks, service integration, and project delivery timelines.
+- [Contact](https://www.nexkode.com/#contact): Project intake form and direct contact points.
+
+## Contact Information
+
+- Location: Valencia Town, Lahore, Punjab (54700), Pakistan
+- Phone: +92 326 8623635
+- Email: contact@nexkode.com

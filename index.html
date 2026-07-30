@@ -10,7 +10,78 @@
     <meta name="description"
         content="NEXKODE is a high-performance digital solutions agency specializing in full-stack web engineering, UI/UX design, and visual media production.">
 
-    <title>NEXKODE — Digital Solutions & Visual Media Agency</title>
+    <title>NEXKODE — Full-Stack Engineering &amp; Visual Media Agency</title>
+    <link rel="canonical" href="https://www.nexkode.com/">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.nexkode.com/">
+    <meta property="og:title" content="NEXKODE — Full-Stack Engineering &amp; Visual Media Agency">
+    <meta property="og:description"
+        content="NEXKODE is a high-performance digital solutions agency specializing in full-stack web engineering, UI/UX design, and visual media production.">
+    <meta property="og:image" content="https://www.nexkode.com/assets_files/hero-img.png">
+    <meta property="og:site_name" content="NEXKODE">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="NEXKODE — Full-Stack Engineering &amp; Visual Media Agency">
+    <meta name="twitter:description"
+        content="NEXKODE is a high-performance digital solutions agency specializing in full-stack web engineering, UI/UX design, and visual media production.">
+    <meta name="twitter:image" content="https://www.nexkode.com/assets_files/hero-img.png">
+
+    <!-- Structured Data: Organization Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "NEXKODE",
+      "url": "https://www.nexkode.com",
+      "logo": "https://www.nexkode.com/assets_files/newlogo-transparent.png",
+      "description": "NEXKODE is a high-performance digital solutions agency specializing in full-stack web engineering, UI/UX design, and visual media production.",
+      "email": "contact@nexkode.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Valencia Town",
+        "addressLocality": "Lahore",
+        "addressRegion": "Punjab",
+        "postalCode": "54700",
+        "addressCountry": "PK"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/nexkode/?viewAsMember=true",
+        "https://www.facebook.com/profile.php?id=61592661535479",
+        "https://www.instagram.com/nexkode_/"
+      ],
+      "dateModified": "2026-07-31"
+    }
+    </script>
+
+    <!-- Structured Data: LocalBusiness Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "NEXKODE",
+      "url": "https://www.nexkode.com",
+      "logo": "https://www.nexkode.com/assets_files/newlogo-transparent.png",
+      "description": "NEXKODE is a high-performance digital solutions agency specializing in full-stack web engineering, UI/UX design, and visual media production.",
+      "email": "contact@nexkode.com",
+      "telephone": "+92 326 8623635",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Valencia Town",
+        "addressLocality": "Lahore",
+        "addressRegion": "Punjab",
+        "postalCode": "54700",
+        "addressCountry": "PK"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/nexkode/?viewAsMember=true",
+        "https://www.facebook.com/profile.php?id=61592661535479",
+        "https://www.instagram.com/nexkode_/"
+      ]
+    }
+    </script>
 
     <link rel="shortcut icon" type="image/png" href="./assets_files/newlogo-transparent.png">
     <link rel="icon" type="image/png" href="./assets_files/newlogo-transparent.png">
@@ -166,6 +237,16 @@
             object-fit: contain;
         }
     </style>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3QVJ4WWGB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-N3QVJ4WWGB');
+    </script>
 </head>
 
 <body>
@@ -238,11 +319,11 @@
                     </li>
                     <li>
                         <i class="fas fa-phone"></i>
-                        <a href="tel:+923000000000">+92 300 0000000</a>
+                        <a href="tel:+923268623635">+92 326 8623635</a>
                     </li>
                     <li>
                         <i class="fas fa-envelope-open-text"></i>
-                        <a href="mailto:contact@nexkode.com">contact@nexkode.com</a>
+                        <a href="#" class="js-obfuscated-email" data-user="contact" data-domain="nexkode.com"></a>
                     </li>
                 </ul>
             </div>
@@ -1305,8 +1386,8 @@
                                     <h3 class="widget-title">Contact Us</h3>
                                 </div>
                                 <ul class="address-list">
-                                    <li><a href="mailto:hassan@nexkode.com">hassan@nexkode.com</a></li>
-                                    <li><a href="mailto:info@nexkode.com">info@nexkode.com</a></li>
+                                <li><a href="#" class="js-obfuscated-email" data-user="hassan" data-domain="nexkode.com"></a></li>
+                                <li><a href="#" class="js-obfuscated-email" data-user="info" data-domain="nexkode.com"></a></li>
                                     <li>Lahore, Punjab, Pakistan</li>
                                 </ul>
                             </div>
@@ -1586,6 +1667,23 @@
                     if (e.target === modal) closeModal();
                 });
             }
+        });
+    </script>
+
+    <!-- Email Obfuscation Helper -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.querySelectorAll('.js-obfuscated-email').forEach(function (el) {
+                var u = el.getAttribute('data-user');
+                var d = el.getAttribute('data-domain');
+                if (u && d) {
+                    var email = u + '@' + d;
+                    el.href = 'mailto:' + email;
+                    if (!el.textContent.trim()) {
+                        el.textContent = email;
+                    }
+                }
+            });
         });
     </script>
 
