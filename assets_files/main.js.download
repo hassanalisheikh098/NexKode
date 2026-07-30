@@ -1863,6 +1863,106 @@ if (document.querySelectorAll(".portfolio-19").length > 0) {
         next.style.marginTop = pinDuration + "px";
     }
 }
-  
+
+    /*======================================
+        Start a Project Form Handlers
+    ========================================*/
+    $(document).ready(function () {
+        // Single-select chips (only 1 active at a time)
+        $('.chip-group.single-select .project-chip').on('click', function () {
+            var $group = $(this).closest('.chip-group');
+            $group.find('.project-chip').removeClass('active').attr('aria-pressed', 'false');
+            $(this).addClass('active').attr('aria-pressed', 'true');
+        });
+
+        // Multi-select chips (toggle active state)
+        $('.chip-group.multi-select .project-chip').on('click', function () {
+            var isActive = $(this).hasClass('active');
+            if (isActive) {
+                $(this).removeClass('active').attr('aria-pressed', 'false');
+            } else {
+                $(this).addClass('active').attr('aria-pressed', 'true');
+            }
+        });
+
+        // Form Submission
+        $('#start-project-form').on('submit', function (e) {
+            e.preventDefault();
+
+            var $form = $(this);
+            var $submitBtn = $form.find('button[type="submit"]');
+
+            // Guard against double submissions while request is in flight
+            if ($submitBtn.prop('disabled')) {
+                return;
+            }
+
+            // Save original button content & show loading state
+            var originalBtnContent = $submitBtn.html();
+            $submitBtn.prop('disabled', true).html('Sending... <i class="fa-solid fa-spinner fa-spin"></i>');
+
+            var lookingTo = $('.chip-group[data-group="lookingTo"] .project-chip.active').map(function () {
+                return $(this).attr('data-value');
+            }).get().join(', ') || 'Not specified';
+
+            var expertise = $('.chip-group[data-group="expertise"] .project-chip.active').map(function () {
+                return $(this).attr('data-value');
+            }).get();
+
+            var fullName = $('#project-fullname').val().trim();
+            var email = $('#project-email').val().trim();
+            var message = $('#project-message').val().trim();
+            var accessKey = $form.find('input[name="access_key"]').val() || '241ccf8f-02da-4f0c-ad83-cbc4b5ed3ad9';
+
+            var payload = {
+                access_key: accessKey,
+                name: fullName,
+                email: email,
+                message: message,
+                looking_to: lookingTo,
+                expertise: expertise.join(', ') || 'Not specified',
+                subject: 'New Project Request from ' + fullName
+            };
+
+            var $msg = $('#project-form-messages');
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: JSON.stringify(payload)
+            })
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function (data) {
+                if (data.success) {
+                    $msg.removeClass('alert-danger').addClass('alert-success')
+                        .html("Thanks! We'll be in touch shortly.")
+                        .slideDown();
+
+                    // Clear inputs
+                    $('#project-fullname').val('');
+                    $('#project-email').val('');
+                    $('#project-message').val('');
+
+                    // Keep button disabled on success
+                    $submitBtn.html('Sent <i class="fa-solid fa-check"></i>');
+                } else {
+                    throw new Error(data.message || 'Submission failed. Please try again.');
+                }
+            })
+            .catch(function (error) {
+                // Restore button state on failure so user can retry without losing entered data
+                $submitBtn.prop('disabled', false).html(originalBtnContent);
+
+                $msg.removeClass('alert-success').addClass('alert-danger')
+                    .html(error.message || 'Oops! Something went wrong. Please try sending again.')
+                    .slideDown();
+            });
+        });
+    });
 
 })(jQuery);

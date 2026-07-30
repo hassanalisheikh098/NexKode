@@ -794,8 +794,8 @@ ul {
 }
 
 .running-text ul li:before {
-  font-family: "Font Awesome 6 Pro";
-  font-weight: 500;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
   content: "\f068";
   position: absolute;
   right: -40px;
@@ -908,8 +908,8 @@ ul {
 }
 
 .running-text.running-3 .inner-3 li:before {
-  font-family: "Font Awesome 6 Pro";
-  font-weight: 500;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
   content: "\e28b";
   font-size: 80px;
   position: absolute;
@@ -2944,7 +2944,8 @@ ul {
 
 .switcher-button .switcher-button-inner-left:before {
   content: "\f186";
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
   font-size: 16px;
   display: block;
   color: #fff;
@@ -2983,7 +2984,8 @@ ul {
 [data-theme=light] .switcher-button .switcher-button-inner-left:before {
   right: 10px;
   content: "\f185";
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
   font-size: 16px;
   color: var(--rr-color-heading-primary);
   -moz-transform: rotate(-90deg);
@@ -3614,9 +3616,9 @@ START: Header CSS
 
 .header .primary-header-inner .header-menu-wrap ul .menu-item-has-children:after {
   background-image: none;
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 6 Free";
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 900;
   content: "\f078";
   color: var(--rr-color-common-white);
   position: absolute;
@@ -5458,7 +5460,7 @@ START: Header CSS
 .mean-bar .mean-nav.mean-nav>ul li a.mean-expand:before,
 .mean-bar .mean-nav.mean-nav>ul li a.mean-expand:after {
   font-size: 12px;
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 6 Free";
   font-weight: 900;
 }
 
@@ -16840,9 +16842,9 @@ START: Faq CSS
 
 .faq-content .accordion .accordion-item .accordion-button:after {
   background-image: none;
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 6 Free";
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 900;
   content: "+";
   color: var(--rr-color-common-white);
   height: 45px;
@@ -16942,7 +16944,8 @@ START: Faq CSS
 
 .faq-content-2 .accordion-item .accordion-header .accordion-button:after {
   background-image: none;
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
   font-size: 18px;
   content: "\f175";
   color: var(--rr-color-common-white);
@@ -17190,12 +17193,12 @@ START: Faq CSS
 
 .faq-content-15 .faq-wrap .accordion-button::after {
   content: "\f107";
-  font-weight: 400;
+  font-weight: 900;
   font-size: 16px;
   line-height: 1;
   background-image: inherit;
   background-repeat: no-repeat;
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 6 Free";
 }
 
 @media only screen and (max-width: 767px) {
@@ -23561,9 +23564,9 @@ START: Sponsor CSS
 
 .page-header .page-header-content .sub-title .home:before {
   background-image: none;
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 6 Free";
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 900;
   content: "\f324";
   color: var(--rr-color-text-body);
   position: absolute;
@@ -29225,9 +29228,9 @@ blockquote .content .author:before {
   height: auto;
   width: auto;
   background-image: none;
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 6 Free";
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 900;
   content: "\f0d7";
   color: var(--rr-color-text-body);
   position: absolute;
@@ -33181,10 +33184,10 @@ START: Footer CSS
 
 .footer-widget.footer-col-2 .footer-list li a:before {
   background-image: none;
-  font-family: "Font Awesome 6 Pro";
+  font-family: "Font Awesome 6 Free";
   font-size: 14px;
-  font-weight: 700;
-  content: "\f356";
+  font-weight: 900;
+  content: "\f105";
   color: var(--rr-color-text-body);
   position: absolute;
   top: 55%;
@@ -38368,6 +38371,219 @@ START: Footer CSS
 [data-theme=light] .project-thumb .bf-address {
   background: rgba(0, 0, 0, 0.05);
   color: rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================================================================
+   START PROJECT SECTION & FORM STYLES — 2-Column Compact
+   ========================================================================== */
+.start-project-section {
+  position: relative;
+  background-color: var(--rr-color-bg-1);
+  border-top: 1px solid var(--rr-color-border-1);
+  overflow: hidden;
+}
+
+.start-project-section .circuit-accent {
+  position: absolute;
+  top: 20px;
+  right: 4%;
+  pointer-events: none;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+@media only screen and (max-width: 991px) {
+  .start-project-section .circuit-accent {
+    display: none;
+  }
+}
+
+.start-project-form .form-group-wrap {
+  margin-bottom: 22px;
+}
+
+.start-project-form .form-group-label {
+  display: block;
+  font-family: var(--rr-ff-heading);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--rr-color-common-white);
+  margin-bottom: 12px;
+  letter-spacing: 0.2px;
+}
+
+.start-project-form .chip-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 10px;
+}
+
+.start-project-form .project-chip {
+  background: transparent;
+  color: var(--rr-color-text-body);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 7px 16px;
+  border-radius: 30px;
+  font-family: var(--rr-ff-body);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              background-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              color 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.start-project-form .project-chip:hover {
+  transform: translateY(-2px) scale(1.03);
+  border-color: var(--rr-color-theme-primary);
+  color: var(--rr-color-common-white);
+}
+
+.start-project-form .project-chip.active {
+  background-color: var(--rr-color-theme-primary);
+  border-color: var(--rr-color-theme-primary);
+  color: var(--rr-color-common-white);
+  box-shadow: 0 4px 14px rgba(63, 90, 243, 0.35);
+  transform: translateY(-1px);
+}
+
+.start-project-form .project-chip:focus-visible {
+  box-shadow: 0 0 0 2px var(--rr-color-theme-primary);
+}
+
+/* Contact Info Card (Right Column) */
+.project-contact-card {
+  background: #161A22;
+  border: 1px solid var(--rr-color-border-1);
+  border-radius: 16px;
+  padding: 32px 28px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 1;
+}
+
+.project-contact-card .card-title {
+  font-family: var(--rr-ff-heading);
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--rr-color-common-white);
+  margin-bottom: 6px;
+}
+
+.project-contact-card .card-subtitle {
+  font-size: 14px;
+  color: var(--rr-color-text-body);
+  margin-bottom: 22px;
+  line-height: 1.5;
+}
+
+.start-project-form .input-field-wrap {
+  position: relative;
+}
+
+.start-project-form .project-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 12px 0;
+  font-family: var(--rr-ff-body);
+  font-size: 15px;
+  color: var(--rr-color-common-white);
+  border-radius: 0;
+  transition: border-color 0.3s ease-in-out;
+  outline: none;
+}
+
+.start-project-form .project-input::placeholder {
+  color: rgba(255, 255, 255, 0.45);
+}
+
+.start-project-form .project-input:focus {
+  border-bottom-color: var(--rr-color-theme-primary);
+}
+
+.start-project-form .project-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.start-project-form .form-messages-div.alert-success {
+  color: #4cd964;
+  background: rgba(76, 217, 100, 0.1);
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: 1px solid rgba(76, 217, 100, 0.2);
+}
+
+.start-project-form .form-messages-div.alert-danger {
+  color: #ff3b30;
+  background: rgba(255, 59, 48, 0.1);
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  border: 1px solid rgba(255, 59, 48, 0.2);
+}
+
+/* Light Theme Overrides for Start Project Form */
+[data-theme=light] .start-project-section {
+  background-color: #ffffff;
+  border-top-color: #e4e4e4;
+}
+
+[data-theme=light] .project-contact-card {
+  background: #f8f9fa;
+  border-color: #e4e4e4;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme=light] .project-contact-card .card-title {
+  color: var(--rr-color-heading-primary);
+}
+
+[data-theme=light] .project-contact-card .card-subtitle {
+  color: var(--rr-color-text-body-light);
+}
+
+[data-theme=light] .start-project-form .form-group-label {
+  color: var(--rr-color-heading-primary);
+}
+
+[data-theme=light] .start-project-form .project-chip {
+  color: #555555;
+  border-color: #d1d5db;
+}
+
+[data-theme=light] .start-project-form .project-chip:hover {
+  border-color: var(--rr-color-theme-primary);
+  color: var(--rr-color-heading-primary);
+}
+
+[data-theme=light] .start-project-form .project-chip.active {
+  background-color: var(--rr-color-theme-primary);
+  border-color: var(--rr-color-theme-primary);
+  color: #ffffff;
+}
+
+[data-theme=light] .start-project-form .project-input {
+  color: var(--rr-color-heading-primary);
+  border-bottom-color: #d1d5db;
+}
+
+[data-theme=light] .start-project-form .project-input::placeholder {
+  color: #888888;
 }
 
 /*# sourceMappingURL=main.css.map */
