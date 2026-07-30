@@ -10,7 +10,7 @@
     <meta name="description"
         content="NEXKODE is a high-performance digital solutions agency specializing in full-stack web engineering, UI/UX design, and visual media production.">
 
-    <title>NEXKODE — Full-Stack Engineering &amp; Visual Media Agency</title>
+    <title>NEXKODE | Full-Stack Engineering &amp; Visual Media Agency</title>
     <link rel="canonical" href="https://www.nexkode.com/">
 
     <!-- Open Graph Meta Tags -->
@@ -83,8 +83,11 @@
     }
     </script>
 
-    <link rel="shortcut icon" type="image/png" href="./assets_files/newlogo-transparent.png">
-    <link rel="icon" type="image/png" href="./assets_files/newlogo-transparent.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets_files/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets_files/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets_files/apple-touch-icon.png">
+    <link rel="manifest" href="./assets_files/site.webmanifest">
+    <link rel="icon" href="./assets_files/favicon.ico">
 
     <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 
@@ -241,11 +244,11 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-N3QVJ4WWGB"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-      gtag('config', 'G-N3QVJ4WWGB');
+        gtag('config', 'G-N3QVJ4WWGB');
     </script>
 </head>
 
@@ -297,7 +300,8 @@
         <div class="side-menu-content">
             <div class="side-menu-logo">
                 <a class="dark-img" href="#"><img src="./assets_files/newlogo-transparent.png" alt="NEXKODE logo"></a>
-                <a class="light-img" href="#"><img src="./assets_files/newlogo-transparent-dark.png" alt="NEXKODE logo"></a>
+                <a class="light-img" href="#"><img src="./assets_files/newlogo-transparent-dark.png"
+                        alt="NEXKODE logo"></a>
             </div>
             <div class="side-menu-wrap"></div>
             <div class="side-menu-about">
@@ -444,8 +448,15 @@
                 }
 
                 @keyframes pulseRing {
-                    0% { transform: scale(0.9); opacity: 1; }
-                    100% { transform: scale(2.2); opacity: 0; }
+                    0% {
+                        transform: scale(0.9);
+                        opacity: 1;
+                    }
+
+                    100% {
+                        transform: scale(2.2);
+                        opacity: 0;
+                    }
                 }
 
                 /* Main headline */
@@ -599,7 +610,8 @@
 
                 <!-- Foreground content -->
                 <div class="hero-video-content">
-                    <span class="hero-video-eyebrow"><span class="pulse-dot"></span> Full-Stack Web &amp; Visual Media Agency</span>
+                    <span class="hero-video-eyebrow"><span class="pulse-dot"></span> Full-Stack Web &amp; Visual Media
+                        Agency</span>
 
                     <h1 class="hero-video-headline">
                         Building &amp; Scaling<br>
@@ -827,7 +839,8 @@
                                     <div class="overlay-color"></div>
                                     <div class="transparent-shape"><img src="./assets_files/service-shape.png"
                                             alt="shape"></div>
-                                    <img src="./assets_files/service-4.jpg" alt="Social Media Management" loading="lazy">
+                                    <img src="./assets_files/service-4.jpg" alt="Social Media Management"
+                                        loading="lazy">
                                     <div class="service-icon">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36"
                                             viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
@@ -1280,17 +1293,19 @@
             <section id="contact" class="start-project-section bg-dark-1 pt-90 pb-90">
                 <div class="circuit-accent" aria-hidden="true">
                     <svg width="220" height="220" viewBox="0 0 220 220" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10 20H90L130 60H210" stroke="var(--rr-color-theme-primary)" stroke-width="1.5" stroke-dasharray="4 4" opacity="0.35"/>
-                        <circle cx="90" cy="20" r="3.5" fill="var(--rr-color-theme-primary)" opacity="0.6"/>
-                        <circle cx="130" cy="60" r="3.5" fill="var(--rr-color-theme-primary)" opacity="0.6"/>
-                        <path d="M30 110H140L180 150H210" stroke="var(--rr-color-theme-primary)" stroke-width="1.5" opacity="0.25"/>
-                        <circle cx="140" cy="110" r="4" fill="var(--rr-color-theme-primary)" opacity="0.5"/>
+                        <path d="M10 20H90L130 60H210" stroke="var(--rr-color-theme-primary)" stroke-width="1.5"
+                            stroke-dasharray="4 4" opacity="0.35" />
+                        <circle cx="90" cy="20" r="3.5" fill="var(--rr-color-theme-primary)" opacity="0.6" />
+                        <circle cx="130" cy="60" r="3.5" fill="var(--rr-color-theme-primary)" opacity="0.6" />
+                        <path d="M30 110H140L180 150H210" stroke="var(--rr-color-theme-primary)" stroke-width="1.5"
+                            opacity="0.25" />
+                        <circle cx="140" cy="110" r="4" fill="var(--rr-color-theme-primary)" opacity="0.5" />
                     </svg>
                 </div>
                 <div class="container">
                     <form id="start-project-form" class="start-project-form">
                         <input type="hidden" name="access_key" value="241ccf8f-02da-4f0c-ad83-cbc4b5ed3ad9">
-                        
+
                         <div class="row g-4 align-items-stretch">
                             <!-- Left Column: Heading + Chip Selection Groups (col-lg-7) -->
                             <div class="col-lg-7 col-12">
@@ -1303,10 +1318,14 @@
                                 <div class="form-group-wrap mb-22">
                                     <label class="form-group-label">I am looking to</label>
                                     <div class="chip-group single-select" data-group="lookingTo">
-                                        <button type="button" class="project-chip active" aria-pressed="true" data-value="Start a New Project">Start a New Project</button>
-                                        <button type="button" class="project-chip" aria-pressed="false" data-value="Product Revamp">Product Revamp</button>
-                                        <button type="button" class="project-chip" aria-pressed="false" data-value="Discovery Workshop">Discovery Workshop</button>
-                                        <button type="button" class="project-chip" aria-pressed="false" data-value="Extend my Team">Extend my Team</button>
+                                        <button type="button" class="project-chip active" aria-pressed="true"
+                                            data-value="Start a New Project">Start a New Project</button>
+                                        <button type="button" class="project-chip" aria-pressed="false"
+                                            data-value="Product Revamp">Product Revamp</button>
+                                        <button type="button" class="project-chip" aria-pressed="false"
+                                            data-value="Discovery Workshop">Discovery Workshop</button>
+                                        <button type="button" class="project-chip" aria-pressed="false"
+                                            data-value="Extend my Team">Extend my Team</button>
                                     </div>
                                 </div>
 
@@ -1314,10 +1333,15 @@
                                 <div class="form-group-wrap mb-0">
                                     <label class="form-group-label">Expertise I need</label>
                                     <div class="chip-group multi-select" data-group="expertise">
-                                        <button type="button" class="project-chip" aria-pressed="false" data-value="Custom Software Development">Custom Software Development</button>
-                                        <button type="button" class="project-chip" aria-pressed="false" data-value="UI/UX Design">UI/UX Design</button>
-                                        <button type="button" class="project-chip" aria-pressed="false" data-value="Frontend Development">Frontend Development</button>
-                                        <button type="button" class="project-chip" aria-pressed="false" data-value="Other">Other</button>
+                                        <button type="button" class="project-chip" aria-pressed="false"
+                                            data-value="Custom Software Development">Custom Software
+                                            Development</button>
+                                        <button type="button" class="project-chip" aria-pressed="false"
+                                            data-value="UI/UX Design">UI/UX Design</button>
+                                        <button type="button" class="project-chip" aria-pressed="false"
+                                            data-value="Frontend Development">Frontend Development</button>
+                                        <button type="button" class="project-chip" aria-pressed="false"
+                                            data-value="Other">Other</button>
                                     </div>
                                 </div>
                             </div>
@@ -1326,19 +1350,25 @@
                             <div class="col-lg-5 col-12">
                                 <div class="project-contact-card">
                                     <h3 class="card-title">Send Your Details</h3>
-                                    <p class="card-subtitle">Tell us about your goals and our team will get back to you within 24 hours.</p>
+                                    <p class="card-subtitle">Tell us about your goals and our team will get back to you
+                                        within 24 hours.</p>
 
                                     <div class="input-field-wrap mb-20">
-                                        <input type="text" id="project-fullname" name="fullname" class="project-input" placeholder="Full Name *" required>
+                                        <input type="text" id="project-fullname" name="fullname" class="project-input"
+                                            placeholder="Full Name *" required>
                                     </div>
                                     <div class="input-field-wrap mb-20">
-                                        <input type="email" id="project-email" name="email" class="project-input" placeholder="Your Email *" required>
+                                        <input type="email" id="project-email" name="email" class="project-input"
+                                            placeholder="Your Email *" required>
                                     </div>
                                     <div class="input-field-wrap mb-25">
-                                        <textarea id="project-message" name="message" class="project-input project-textarea" rows="3" placeholder="Tell us about your project..."></textarea>
+                                        <textarea id="project-message" name="message"
+                                            class="project-input project-textarea" rows="3"
+                                            placeholder="Tell us about your project..."></textarea>
                                     </div>
 
-                                    <div id="project-form-messages" class="form-messages-div mb-20" style="display:none;"></div>
+                                    <div id="project-form-messages" class="form-messages-div mb-20"
+                                        style="display:none;"></div>
 
                                     <button type="submit" class="rr-primary-btn w-100 justify-content-center">
                                         Send Request <i class="fa-solid fa-arrow-right"></i>
@@ -1386,8 +1416,10 @@
                                     <h3 class="widget-title">Contact Us</h3>
                                 </div>
                                 <ul class="address-list">
-                                <li><a href="#" class="js-obfuscated-email" data-user="hassan" data-domain="nexkode.com"></a></li>
-                                <li><a href="#" class="js-obfuscated-email" data-user="info" data-domain="nexkode.com"></a></li>
+                                    <li><a href="#" class="js-obfuscated-email" data-user="hassan"
+                                            data-domain="nexkode.com"></a></li>
+                                    <li><a href="#" class="js-obfuscated-email" data-user="info"
+                                            data-domain="nexkode.com"></a></li>
                                     <li>Lahore, Punjab, Pakistan</li>
                                 </ul>
                             </div>
